@@ -12,7 +12,7 @@ function EditorNavbar() {
         <p>
           File / <span className="text-[gray]">My first project</span>
         </p>
-        <i className="p-[8px] bg-black rounded-[5px] cursor-pointer text-[20px]">
+        <i className="btn p-[8px] bg-black rounded-[5px] cursor-pointer text-[20px]">
           <FiDownload />
         </i>
       </div>
