@@ -5,8 +5,11 @@ import Avatar from "react-avatar";
 import { MdOutlineLightMode } from "react-icons/md";
 import { BsFillGridFill } from "react-icons/bs";
 import { toggleClass } from "../helper";
+import { useLayout } from "../contexts/LayoutContext";
 
 function Navbar() {
+  const { isGridLayout, setIsGridLayout } = useLayout();
+
   return (
     <>
       <div className="navbar flex items-center justify-between px-[100px] h-[80px] bg-[#141414]">
@@ -41,10 +44,12 @@ function Navbar() {
             <MdOutlineLightMode className="text-[20px]" /> Light mode
           </i>
           <i
+            onClick={() => setIsGridLayout(!isGridLayout)}
             className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
             style={{ fontStyle: "normal" }}
           >
-            <BsFillGridFill className="text-[20px]" /> Grid layout
+            <BsFillGridFill className="text-[20px]" />{" "}
+            {isGridLayout ? "List layout" : "Grid layout"}
           </i>
         </div>
       </div>

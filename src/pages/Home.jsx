@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import ListCard from "../components/ListCard";
 import GridCard from "../components/GridCard";
+import { useLayout } from "../contexts/LayoutContext";
 
 function Home() {
-  const [isGridLayout, setisGridLayout] = useState(false);
+  const { isGridLayout } = useLayout();
 
   const [isCreateModelShow, setIsCreateModelShow] = useState(false);
 
@@ -36,13 +37,10 @@ function Home() {
             <GridCard />
             <GridCard />
             <GridCard />
-            <GridCard />
-            <GridCard />
-            <GridCard />
-            <GridCard />
           </div>
         ) : (
           <div className="list px-[100px]">
+            <ListCard />
             <ListCard />
             <ListCard />
             <ListCard />
