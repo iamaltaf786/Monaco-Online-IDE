@@ -48,7 +48,16 @@ function Login() {
               </Link>
             </p>
 
-            <button className="btnBlue w-full mt-[20px]">Login</button>
+            <button
+              className={`btnBlue w-full mt-[20px] ${
+                email && pwd
+                  ? "hover:bg-[#0086b3] bg-[#00aeef]"
+                  : "bg-gray-400 cursor-not-allowed"
+              }`}
+              disabled={!email || !pwd}
+            >
+              Login
+            </button>
           </form>
           {/* https://www.youtube.com/watch?v=VTRv_f_SmH8&list=PL8RMefbOoLenmPWQv3vtxz73nrlmN4uwD&index=1&t=508s */}
         </div>

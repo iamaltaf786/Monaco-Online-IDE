@@ -36,19 +36,19 @@ html {
 }
 
 .btnBlue {
-  background-color: #00AEEF;
+  background-color: #00aeef;
   color: #fff;
   padding: 10px 20px;
   border: none;
   text-align: center;
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 16px;
 }
 
-.btnBlue:hover {
+/* .btnBlue:hover {
   background-color: #0086b3;
-}
+} */
 
 .grid {
   display: flex !important;
@@ -75,6 +75,6 @@ html {
 }
 
 .lightMode .btn {
-  background-color: #C1C1C1;
+  background-color: #c1c1c1;
   color: #000;
 }
